@@ -1,0 +1,116 @@
+
+
+body{
+    text-align: center;
+   background-color: #ffa07a; 
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   overflow-x: hidden;
+
+}
+
+.add-a-book{
+    /* margin-bottom: 100px; */
+    /* text-align: right; */
+}
+.main-book-table {
+    margin-left: auto;
+    margin-right: auto;
+  /* justify-content: center; */
+  align-items: center;
+    border-radius: 5px;
+    width: 60%;
+    /* margin: 300px */
+    border: 1px solid #ccc;
+    /* margin: 0 0 1em;
+    font-size: 1em; */
+    line-height: 2;
+    background: #fff;
+    text-align: center;
+}
+
+.read-button,.delete-button,.update-button{
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    /* text-decoration: none; */
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+.close-button{
+    color: white;
+    justify-content: center;
+    text-align: center;
+
+}
+.read-button:hover , .delete-button:hover, .update-button:hover, .close-button:hover{
+    color: rgb(0, 0, 0);
+}
+
+.read-button, .close-button{
+    background-color: #B83400;
+}
+
+.update-button{
+    background-color: #B27C51;
+}
+
+.delete-button{
+    background-color: #9CB199;
+}
+
+.read-modal{
+    border-radius: 5px;
+    background-color: #111;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 90vh;
+    min-width: 300px;
+    text-align: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.read-modal.open {
+    /* right: 0; */
+    left: 75%;
+    transition: left .5s;
+display: block;
+}
+.read-modal h3{
+    color: #B83400;
+    /* text-decoration: overline; */
+    text-transform: capitalize;
+}
+
+.read-modal div   {
+    /* display: flex; */
+   /* padding-left: 40px; */
+    /* width: 80%; */
+    height: 80%;
+    /* padding-bottom: 10px; */
+}
+
+.rate-buttons{
+    /* background-color: #ccc; */
+    color: white;
+    margin-bottom: 10px;
+    max-height: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+   /* height: 10px; */
+    /* flex-direction: row; */
+    /* width: 5%; */
+    /* height: 5%; */
+    /* flex-grow: 0.2; */
+    /* flex-shrink: 0.2; */
+    
+}
+
+

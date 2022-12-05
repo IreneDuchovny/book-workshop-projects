@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Book-Shop</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Welcome to my bookshop</h1>
+    <a href="" class="add-a-book" onclick="onAddBook()">Create new book</a>
+    <section>
+        <label>
+            Max price:
+            <input type="range" min="0" max="400" value="400" class="filter-price-range"
+                onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+        </label>
+        <label>
+            Max price:
+            <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+        </label>
+
+        <label>
+            Search:
+            <input type="text" class="search-input" placeholder="Search a book" oninput="onSetFilterBy({search: this.value})">
+        </label>
+        <button class="previous-page" onclick="onPrevPage()">⬅️ previous</button>
+        <button class="next-page" onclick="onNextPage()">next ➡️ </button>
+   
+</section>
+    <table class="main-book-table">
+        <thead class="book-header">
+        <tbody class="books-list">  
+        </tbody>
+        </thead>
+    </table>
+    <div class="read-modal">
+        <h3>book name</h3>
+     
+        <!-- <h4>Maximal Speeding <span></span> </h4> -->
+        <!-- <h5>Car Description</h5> -->
+        <div class="book-img"></div>
+        <div class="rate-buttons">
+            <button onclick="onRateChange(-1)"> - </button>
+            <span>  </span>
+            <button onclick="onRateChange(1)"> + </button>
+        </div>
+        <!-- <p> </p> -->
+        <button class="close-button" onclick="onCloseBookModal()">Close</button>
+        
+    </div>
+
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/book.controller.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    
+
+</body>
+
+</html>
